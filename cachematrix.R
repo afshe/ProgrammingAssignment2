@@ -39,7 +39,9 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get()
+  ##Computing inverse using solve function
   m <- solve(data, ...)
+  ## Cacheing the inverse computed in the above line
   x$setcachedinverse(m)
   m       ## Return a matrix that is the inverse of 'x'
 }
